@@ -1,60 +1,60 @@
-const uuid = require('uuid');
+const uuid = require("uuid");
 
 module.exports = () => {
   return {
     TableName: `dynograte-${uuid.v4()}`,
     AttributeDefinitions: [
       {
-        AttributeName: 'id',
-        AttributeType: 'S'
+        AttributeName: "id",
+        AttributeType: "S",
       },
       {
-        AttributeName: 'homeId',
-        AttributeType: 'S'
+        AttributeName: "homeId",
+        AttributeType: "S",
       },
       {
-        AttributeName: 'petId',
-        AttributeType: 'S'
-      }
+        AttributeName: "petId",
+        AttributeType: "S",
+      },
     ],
     KeySchema: [
       {
-        AttributeName: 'homeId',
-        KeyType: 'HASH'
+        AttributeName: "homeId",
+        KeyType: "HASH",
       },
       {
-        AttributeName: 'id',
-        KeyType: 'RANGE'
-      }
+        AttributeName: "id",
+        KeyType: "RANGE",
+      },
     ],
 
     ProvisionedThroughput: {
       ReadCapacityUnits: 1,
-      WriteCapacityUnits: 1
+      WriteCapacityUnits: 1,
     },
 
     GlobalSecondaryIndexes: [
       {
-        IndexName: 'petIndex',
+        IndexName: "petIndex",
         KeySchema: [
           {
-            AttributeName: 'homeId',
-            KeyType: 'HASH'
+            AttributeName: "homeId",
+            KeyType: "HASH",
           },
           {
-            AttributeName: 'petId',
-            KeyType: 'RANGE'
-          }
+            AttributeName: "petId",
+            KeyType: "RANGE",
+          },
         ],
         Projection: {
-          ProjectionType: 'ALL'
+          ProjectionType: "ALL",
         },
 
         ProvisionedThroughput: {
           ReadCapacityUnits: 1,
-          WriteCapacityUnits: 1
-        }
-      }
-    ]
+          WriteCapacityUnits: 1,
+        },
+      },
+    ],
   };
 };

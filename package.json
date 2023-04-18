@@ -1,5 +1,5 @@
 {
-  "name": "dynograte",
+  "name": "dynograte-v2",
   "version": "2.2.2",
   "description": "DynamoDB migration tool",
   "main": "index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/austinkelleher/dynograte.git"
+    "url": "git+https://github.com/aditya-clerisy/dynograte.git"
   },
   "keywords": [
     "dynamo",
@@ -20,12 +20,11 @@
     "migration",
     "database"
   ],
-  "author": "Austin Kelleher, a@alk.im",
-  "license": "MIT",
+  "author": "Aditya Tapaswi, aditya@clerisy-inc.com",
   "bugs": {
-    "url": "https://github.com/austinkelleher/dynograte/issues"
+    "url": "https://github.com/aditya-clerisy/dynograte/issues"
   },
-  "homepage": "https://github.com/austinkelleher/dynograte#readme",
+  "homepage": "https://github.com/aditya-clerisy/dynograte#readme",
   "dependencies": {
     "argly": "^1.0.0",
     "conflogger": "^1.0.1",

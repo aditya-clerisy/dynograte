@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 exports.retry = true;
 
@@ -7,5 +7,5 @@ exports.timesRun = 0;
 
 exports.up = (dynamodb) => {
   exports.timesRun++;
-  return Promise.reject(new Error('This migration failed!'));
+  return Promise.reject(new Error("This migration failed!"));
 };

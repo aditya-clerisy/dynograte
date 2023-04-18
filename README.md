@@ -5,14 +5,14 @@ Dynograte is a Node.js DynamoDB migration tool
 ## Installation
 
 ```bash
-npm install dynograte
+npm install dynograte-v2
 ```
 
 Dynograte also comes packaged with tooling for making your life easier. You
 obviously need it. You can install Dynograte globally with:
 
 ```bash
-npm install dynograte -g
+npm install dynograte-v2 -g
 ```
 
 ## Features
@@ -157,24 +157,17 @@ exports.up = (dynamodb) => {
 
 ## Tests
 
-To run the tests, you can either run docker, or specify your own DynamoDB
+To run the tests specify your own DynamoDB
 configuration in `config.js`.
 
-Run Docker and tests:
-
-```bash
-npm run docker-test
-```
-
-Run tests without Docker:
+Run tests:
 
 ```bash
 npm test
 ```
 
 
-`start-docker.sh` generates a `config.js` file that contains the DynamoDB
-configuration. You can also manually create it to include your own custom config:
+You need create your own custom config:
 
 ```javascript
 'use strict';

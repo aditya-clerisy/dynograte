@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
-const dynograte = require('../');
+const dynograte = require("../");
 
 module.exports = {
-  'create': (args) => {
+  create: (args) => {
     return dynograte.createMigrationFile(args.dir, args.migration);
-  }
+  },
 };

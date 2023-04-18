@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const Dynograte = require('./lib/Dynograte');
+const Dynograte = require("./lib/Dynograte");
 
 exports.create = (options) => {
   return new Dynograte(options);
@@ -11,4 +11,4 @@ exports.migrate = (options, migrators) => {
   return dynograte.migrate(migrators);
 };
 
-exports.createMigrationFile = require('./lib/util/createMigrationFile');
+exports.createMigrationFile = require("./lib/util/createMigrationFile");
