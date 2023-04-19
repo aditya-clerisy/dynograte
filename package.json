@@ -1,5 +1,5 @@
 {
-  "name": "dynograte-v2",
+  "name": "@clerisy/dynograte-v2",
   "version": "2.2.3",
   "description": "DynamoDB migration tool",
   "main": "index.js",
@@ -36,5 +36,10 @@
     "aws-sdk": "^2.5.5",
     "chai": "^3.5.0",
     "mocha": "^10.2.0"
-  }
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "license": "ISC"
 }
